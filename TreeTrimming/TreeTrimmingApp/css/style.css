@@ -1,0 +1,65 @@
+html,
+body,
+#viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#container {
+    margin-top: 130px;
+    padding-top: 130px;
+}
+#AddProjectDiv {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    position: fixed;
+    left: 20px;
+    bottom: 30px;
+    width: 420px;
+    box-shadow: 5px 5px 5px #5c5c5c;
+}
+
+#AddProjectFields {
+    display: none;
+}
+
+#AddProjectToggle {
+    position: fixed;
+    left: 25px;
+}
+
+#GetStartPoint, #GetEndPoint {
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+
+#Feedback {
+    top: 10px;
+    font-weight: bold;
+}
+/* #StartCoords, #EndCoords {
+    width: 200px;
+
+} */
+
+.title {
+    font-family: "Bangers", cursive;
+    text-align: center;
+    font-size: 150%;
+    left: 25px;
+    cursor: pointer;
+}
+
+.form {
+   /* margin-top: 140px;    */
+    left: 50px;
+    overflow: scroll;
+}
+.calcite-title-main a{
+    color: #f8f8f8;
+}

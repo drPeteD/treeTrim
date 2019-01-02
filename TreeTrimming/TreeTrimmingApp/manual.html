@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tree Trimming Manual Entry</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <style type="text/css">
+        #container {
+            padding-top: 60px;
+        }
+        </style>
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Tree Trimming and Removal</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            
+            
+          </ul>
+          <!-- <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form> -->
+        </div>
+      </nav>
+      <div class="container" id="container">
+        <!-- <form class="form"> -->
+            <div class="form-group">
+                <div id="divDateReviewed">
+                    <label for="DateReviewed">Date Reviewed</label>
+                    <input type="date" name="DateReviewed" id="DateReviewed" class="form-control" /> 
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="divProjectType">
+                    <strong>Project Type</strong> &nbsp; <label class="radio-inline">
+                        <input type="radio" name="radioProjectType" id="radioProjectTypeTrimming" value="Trimming">
+                        Trimming
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="radioProjectType" id="radioProjectTypeRemoval" value="Removal">
+                        Removal
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div id="divRouteID"><label for="txtRouteId">Route ID <a href="https://gis.transportation.wv.gov/routeidbuilder/" target="_new" class="btn btn-default" role="button" title="Build a Route ID" aria-label="Build a Route ID"><span class="fa-stack fa-2x"  title="Build a Route ID">
+                    <i class="fas fa-square fa-stack-2x"></i>
+                    <i class="fas fa-road fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a> </label> 
+                    <input type="text" id="txtRouteId" class="form-control" /></div>
+            </div>
+            <div class="form-group">
+                <label for="beginLat">Begin Latitude (Decimal Degrees)</label>
+                <input type="text" class="form-control" id="beginLat" />
+
+            </div>
+            <div class="form-group">
+                <label for="beginLong">Begin Longitude (Decimal Degrees)</label>
+                <input type="text" class="form-control" id="beginLong" />
+            </div>
+            <div class="form-group">
+                <label for="beginMilepoint">Begin Milepoint</label>
+                <input type="text" class="form-control" id="beginMilepoint" />
+            </div>
+            <div id="EndCoords">
+                <div class="form-group">
+                    <label for="EndLat">Ending Latitude (Decimal Degrees)</label>
+                    <input type="text" class="form-control" id="EndLat" />
+
+                </div>
+                <div class="form-group">
+                    <label for="EndLong">Ending Longitude (Decimal Degrees)</label>
+                    <input type="text" class="form-control" id="EndLong" />
+                </div>
+                <div class="form-group">
+                    <label for="EndMilepoint">Ending Milepoint</label>
+                    <input type="text" class="form-control" id="EndMilepoint" />
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <div id="divWidth">
+                    <label for="txtWidth">Width</label> <input type="text" id="txtWidth" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                    <label for="EffectiveLength">Effective Length</label>
+                    <input type="text" class="form-control" id="EffectiveLength" />
+                </div>
+                <div class="form-group">
+                        <label for="EffectiveAcres">Effective Acres</label>
+                        <input type="text" class="form-control" id="EffectiveAcres" />
+                    </div>
+            <div class="form-group">
+                <div id="divNotes">
+                    <label for="txtNotes">Notes</label>
+                    <textarea name="txtNotes" id="txtNotes" class="form-control" rows="3"></textarea>
+                </div>
+            </div>       
+            <div class="form-group">
+                    <div id="Feedback"></div>
+                <button id="btnSubmit" type="button" class="btn btn-primary">Submit</button> &nbsp; <button id="btnReset"
+                    type="button" class="btn btn-default">Reset</button>
+               
+            </div>
+
+
+    </div>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script src="js/manual.js"></script>
+</body>
+</html>

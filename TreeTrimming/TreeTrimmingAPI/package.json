@@ -1,0 +1,22 @@
+{
+  "name": "treetrimming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "treetrimming"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^7.2.1",
+    "restify-cors-middleware": "^1.1.1",
+    "restify-errors": "^6.1.1",
+    "seriate": "^1.0.0",
+    "when": "^3.7.8"
+  }
+}
